@@ -23,7 +23,7 @@ async function choose(id){const next=datasets.find(d=>d[0]===id);if(!next)return
   if(id==='race'){selected=data.headers[1];choice('Company',data.headers.slice(1),selected,v=>selected=v);}
   if(id==='gender'){selected=data.rows[0].company;choice('Company',data.rows.map(r=>r.company),selected,v=>selected=v);}
   if(id==='pay'||id==='climate')years('year');
-  if(id==='names'){selected='All';choice('Reported sex',['All','Female','Male'],selected,v=>selected=v);years('Year');start=end;}
+  if(id==='names'){selected='All';choice('Reported sex',['All','Female','Male'],selected,v=>selected=v);years('Year');start=end;$('filters').querySelector('input').value=start;}
   if(id==='heroes'){selected=data.rows[0].Name;second=data.rows[1].Name;const names=data.rows.map(r=>r.Name);choice('First character',names,selected,v=>selected=v);choice('Second character',names,second,v=>second=v);}
   await render();
  }catch(error){if(myTicket===ticket)$('status').textContent='This dataset could not load. Refresh to retry; serve the project over HTTP.';}
