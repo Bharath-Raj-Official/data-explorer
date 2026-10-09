@@ -6,7 +6,7 @@ Historical datasets are easier to understand when the chart opens with an exampl
 
 ## Demo
 
-Local preview works with the setup below. GitHub Pages publication is pending destination authentication; a live URL will be added after verification.
+[Open the live demo](https://bharath-raj-official.github.io/data-explorer/). Local setup is also available below.
 
 ## What it does
 
